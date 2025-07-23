@@ -1,0 +1,355 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\datas\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\datas\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\hubs\\warehousemobilehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\hubs\\warehousemobilehub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\services\\rabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\services\\rabbitmqservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\services\\inwarehousemobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\services\\inwarehousemobile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\pages\\privacy.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\pages\\privacy.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\pages\\error.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\pages\\error.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\pages\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\pages\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\models\\warehousemobilecreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\models\\warehousemobilecreatedevent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\Desktop\\New folder (4)\\WarehouseMobile\\WarehouseMobile\\Migrations\\20250722142644_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Administrator\\Desktop\\New folder (4)\\WarehouseMobile\\WarehouseMobile\\Migrations\\20250722140429_EditeEvanet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|c:\\users\\administrator\\desktop\\backup\\warehousemobile\\warehousemobile\\migrations\\20250722142928_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01465A00-DEFD-4572-A999-CE63554A6B92}|WarehouseMobile\\WarehouseMobile.csproj|solutionrelative:warehousemobile\\migrations\\20250722142928_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Pages\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "WarehouseMobile\\Pages\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-23T03:54:59.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Error.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Error.cshtml.cs",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Pages\\Error.cshtml.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Error.cshtml.cs",
+              "RelativeToolTip": "WarehouseMobile\\Pages\\Error.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T03:54:16.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Pages\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Privacy.cshtml",
+              "RelativeToolTip": "WarehouseMobile\\Pages\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-23T03:53:40.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Privacy.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Privacy.cshtml.cs",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Pages\\Privacy.cshtml.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Privacy.cshtml.cs",
+              "RelativeToolTip": "WarehouseMobile\\Pages\\Privacy.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T03:53:25.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20250722142928_init.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Migrations\\20250722142928_init.cs",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Migrations\\20250722142928_init.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Migrations\\20250722142928_init.cs",
+              "RelativeToolTip": "WarehouseMobile\\Migrations\\20250722142928_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:29:28.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\appsettings.json",
+              "RelativeDocumentMoniker": "WarehouseMobile\\appsettings.json",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\appsettings.json",
+              "RelativeToolTip": "WarehouseMobile\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-22T14:27:58.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Program.cs",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Program.cs",
+              "RelativeToolTip": "WarehouseMobile\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T13:13:46.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WarehouseMobile\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-23T03:55:03.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "WarehouseMobile\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\appsettings.Development.json",
+              "RelativeToolTip": "WarehouseMobile\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-22T14:27:54.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "WarehouseMobile\\Pages\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-23T03:55:05.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20250722142644_init.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\New folder (4)\\WarehouseMobile\\WarehouseMobile\\Migrations\\20250722142644_init.cs",
+              "RelativeDocumentMoniker": "..\\..\\New folder (4)\\WarehouseMobile\\WarehouseMobile\\Migrations\\20250722142644_init.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\New folder (4)\\WarehouseMobile\\WarehouseMobile\\Migrations\\20250722142644_init.cs",
+              "RelativeToolTip": "..\\..\\New folder (4)\\WarehouseMobile\\WarehouseMobile\\Migrations\\20250722142644_init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:26:45.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Error.cshtml",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Pages\\Error.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Error.cshtml",
+              "RelativeToolTip": "WarehouseMobile\\Pages\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-22T14:25:30.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20250722140429_EditeEvanet.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\New folder (4)\\WarehouseMobile\\WarehouseMobile\\Migrations\\20250722140429_EditeEvanet.cs",
+              "RelativeDocumentMoniker": "..\\..\\New folder (4)\\WarehouseMobile\\WarehouseMobile\\Migrations\\20250722140429_EditeEvanet.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\New folder (4)\\WarehouseMobile\\WarehouseMobile\\Migrations\\20250722140429_EditeEvanet.cs",
+              "RelativeToolTip": "..\\..\\New folder (4)\\WarehouseMobile\\WarehouseMobile\\Migrations\\20250722140429_EditeEvanet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:04:30.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Pages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "WarehouseMobile\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T14:02:21.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Pages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\Index.cshtml",
+              "RelativeToolTip": "WarehouseMobile\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-22T13:58:36.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "WarehouseMobileCreatedEvent.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Models\\WarehouseMobileCreatedEvent.cs",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Models\\WarehouseMobileCreatedEvent.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Models\\WarehouseMobileCreatedEvent.cs",
+              "RelativeToolTip": "WarehouseMobile\\Models\\WarehouseMobileCreatedEvent.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T13:22:38.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InWarehouseMobile.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Services\\InWarehouseMobile.cs",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Services\\InWarehouseMobile.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Services\\InWarehouseMobile.cs",
+              "RelativeToolTip": "WarehouseMobile\\Services\\InWarehouseMobile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T13:07:53.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RabbitMqService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Services\\RabbitMqService.cs",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Services\\RabbitMqService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Services\\RabbitMqService.cs",
+              "RelativeToolTip": "WarehouseMobile\\Services\\RabbitMqService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowD8AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T13:07:38.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WarehouseMobileHub.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Hubs\\WarehouseMobileHub.cs",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Hubs\\WarehouseMobileHub.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Hubs\\WarehouseMobileHub.cs",
+              "RelativeToolTip": "WarehouseMobile\\Hubs\\WarehouseMobileHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T13:07:25.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Datas\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Datas\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Datas\\AppDbContext.cs",
+              "RelativeToolTip": "WarehouseMobile\\Datas\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-22T13:07:18.816Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "WarehouseMobile\\Pages\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Desktop\\BackUp\\WarehouseMobile\\WarehouseMobile\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "WarehouseMobile\\Pages\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-22T13:07:10.031Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Zamin.Core.RequestResponse.Queries;
+
+namespace Book.Core.RequestResponse.Books.Queries.GetPageFilter
+{
+    public class GetBookShopPageFilterQuery : PageQuery<PagedData<GetBookShopPageFilterResult>>
+    {
+        public string? Title { get; set; }
+    }
+}
