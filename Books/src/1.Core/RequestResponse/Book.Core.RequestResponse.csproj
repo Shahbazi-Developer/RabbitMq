@@ -12,6 +12,7 @@
 		</ItemGroup>
 
 		<ItemGroup>
+		  <ProjectReference Include="..\..\..\Book.SharedKernel\Book.SharedKernel.csproj" />
 		  <ProjectReference Include="..\Resources\Book.Core.Resources.csproj" />
 		</ItemGroup>
 

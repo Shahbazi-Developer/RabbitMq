@@ -1,30 +1,32 @@
 ﻿using Book.Core.Contracts.Books;
+using Book.SharedKernel.Translators;
 using Microsoft.Extensions.Logging;
+using Zamin.Extensions.Translations.Abstractions;
 
-namespace MobileView.Services
+namespace Book.Core.ApplicationService.Books.Commands.ReqBooks
 {
     public class InventoryCheckResponseHandler
     {
         private readonly ILogger<InventoryCheckResponseHandler> _logger;
+        private readonly ITranslator _translator;
 
-        public InventoryCheckResponseHandler(ILogger<InventoryCheckResponseHandler> logger)
+        public InventoryCheckResponseHandler(ILogger<InventoryCheckResponseHandler> logger, ITranslator translator)
         {
             _logger = logger;
+            _translator = translator;
         }
 
         public async Task Handle(WarehouseMobileCreatedEvent response)
         {
             if (string.IsNullOrWhiteSpace(response.Title) || string.IsNullOrWhiteSpace(response.Author))
             {
-                _logger.LogWarning("❌ پاسخ دریافتی از انبار نامعتبر است: عنوان یا نویسنده خالی است.");
+                _logger.Log(LogLevel.Information, _translator[TranslatorKeys.HANDLER_RUN_LOG, GetType().Name]);
             }
             else
             {
-                _logger.LogInformation("📦 کتاب در انبار ثبت شد: '{Title}' از {Author} - تاریخ: {Date}",
+               _logger.Log(LogLevel.Information, _translator[TranslatorKeys.HANDLER_RUN_LOG, GetType().Name],
                     response.Title, response.Author, response.CreationDate.ToString("yyyy/MM/dd HH:mm"));
             }
-
-            // اگر نیاز به پردازش بیشتر دارید (مثل ذخیره در DB یا ارسال به SignalR)، اینجا انجام بده
 
             await Task.CompletedTask;
         }

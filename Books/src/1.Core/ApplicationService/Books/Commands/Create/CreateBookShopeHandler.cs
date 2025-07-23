@@ -13,10 +13,9 @@ namespace Book.Core.ApplicationService.Books.Commands.Create
         private readonly IBookShopCommandRepository _commandRepository;
         private readonly IRabbitMqProducer _rabbitMqProducer;
 
-        public CreateBookShopeHandler(
-            ZaminServices zaminServices,
-            IBookShopCommandRepository commandRepository,
-            IRabbitMqProducer rabbitMqProducer)
+        public CreateBookShopeHandler(ZaminServices zaminServices,
+                                      IBookShopCommandRepository commandRepository,
+                                      IRabbitMqProducer rabbitMqProducer)
             : base(zaminServices)
         {
             _commandRepository = commandRepository;
@@ -25,19 +24,18 @@ namespace Book.Core.ApplicationService.Books.Commands.Create
 
         public override async Task<CommandResult> Handle(CreateBookShopCommands command)
         {
-            var parameter = new CreateBookShopParameter(
-                command.Title,
-                command.Author,
-                command.Publisher,
-                command.ISBN,
-                command.Language,
-                command.Genre,
-                command.PublicationYear,
-                command.Edition,
-                command.Price,
-                command.IsAvailable,
-                command.StockQuantity,
-                command.CreationDate);
+            var parameter = new CreateBookShopParameter(command.Title,
+                                                        command.Author,
+                                                        command.Publisher,
+                                                        command.ISBN,
+                                                        command.Language,
+                                                        command.Genre,
+                                                        command.PublicationYear,
+                                                        command.Edition,
+                                                        command.Price,
+                                                        command.IsAvailable,
+                                                        command.StockQuantity,
+                                                        command.CreationDate);
 
             var bookShop = new BookShop(parameter);
             await _commandRepository.InsertAsync(bookShop);
