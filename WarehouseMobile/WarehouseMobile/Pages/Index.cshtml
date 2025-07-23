@@ -1,10 +1,10 @@
 ﻿@page
 @model WarehouseMobile.Pages.IndexModel
 @{
-    ViewData["Title"] = "WarehouseMobile from RabbitMQ";
+    ViewData["Title"] = "WarehouseBook from RabbitMQ";
 }
 
-<!-- افزودن فونت فارسی Vazirmatn -->
+
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
 
 <style>
@@ -75,13 +75,12 @@
             border-right: none;
         }
 
-    /* فاصله بین ردیف‌ها */
     tbody tr + tr {
         margin-top: 12px;
     }
 </style>
 
-<h2>📦 Warehouse</h2>
+<h2> Book Warehouse 📦</h2>
 
 <table>
     <thead>
@@ -93,13 +92,13 @@
         </tr>
     </thead>
     <tbody id="warehouseTableBody">
-        @foreach (var warehouseMobile in Model.Warehouses)
+        @foreach (var bookWrehouse in Model.Warehouses)
         {
             <tr>
-                <td>@warehouseMobile.BookId</td>
-                <td>@warehouseMobile.Title</td>
-                <td>@warehouseMobile.Author</td>
-                <td>@warehouseMobile.CreationDate.ToString("yyyy/MM/dd HH:mm")</td>
+                <td>@bookWrehouse.BookId</td>
+                <td>@bookWrehouse.Title</td>
+                <td>@bookWrehouse.Author</td>
+                <td>@bookWrehouse.CreationDate.ToString("yyyy/MM/dd HH:mm")</td>
             </tr>
         }
     </tbody>
@@ -109,21 +108,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
     <script>
         const connection = new signalR.HubConnectionBuilder()
-            .withUrl("/warehouseMobileHub")
+            .withUrl("/bookWarehouseHub")
             .build();
 
-        connection.on("ReceiveWarehouseMobile", function (warehouseMobile) {
-            const table = document.getElementById("warehouseTableBody");
+        connection.on("ReceiveBookWarehouse", function (warehouseMobile) {
+            const table = document.getElementById("bookWarehouseTableBody");
             const row = document.createElement("tr");
 
             row.innerHTML = `
-                <td>${warehouseMobile.bookId}</td>
-                <td>${warehouseMobile.title}</td>
-                <td>${warehouseMobile.author}</td>
-                <td>${new Date(warehouseMobile.creationDate).toLocaleString()}</td>
+                <td>${bookWrehouse.bookId}</td>
+                <td>${bookWrehouse.title}</td>
+                <td>${bookWrehouse.author}</td>
+                <td>${new Date(bookWrehouse.creationDate).toLocaleString()}</td>
             `;
 
-            // اضافه کردن ردیف جدید در انتهای جدول به جای ابتدای آن
+
             table.appendChild(row);
         });
 
