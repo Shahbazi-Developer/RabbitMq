@@ -284,4 +284,20 @@ public class TranslatorValues
 
     #endregion
 
+
+
+    #region Book
+    public const string Author = "نویسنده کتاب";
+    public const string Publisher = "ناشر کتاب";
+    public const string ISBN = "شماره استاندارد بین‌المللی کتاب";
+    public const string Language = "زبان";
+    public const string Genre = "ژانر کتاب";
+    public const string PublicationYear = "تاریخ انتشار";
+    public const string Edition = "نسخه کتاب";
+    public const string Price = "قیمت";
+    public const string IsAvailable = "فعال بودن / نبودن ";
+    public const string StockQuantity = "مقدار سهام";
+
+    #endregion
+
 }

@@ -2,7 +2,7 @@
 
 namespace MobileView.Hubs
 {
-    public class WarehouseMobileHub : Hub
+    public class BookWarehouseHub : Hub
     {
     }
 }

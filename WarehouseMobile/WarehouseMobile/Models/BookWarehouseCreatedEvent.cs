@@ -2,7 +2,7 @@
 
 namespace MobileView.Models
 {
-    public class WarehouseMobileCreatedEvent
+    public class BookWarehouseCreatedEvent
     {
         [Key]
         public long Id { get; set; }
