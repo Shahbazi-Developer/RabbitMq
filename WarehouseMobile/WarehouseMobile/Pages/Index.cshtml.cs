@@ -16,7 +16,7 @@ public class IndexModel : PageModel
     }
 
 
-    public List<WarehouseMobileCreatedEvent> Warehouses { get; set; } = new();
+    public List<BookWarehouseCreatedEvent> Warehouses { get; set; } = new();
 
     public void OnGet()
     {

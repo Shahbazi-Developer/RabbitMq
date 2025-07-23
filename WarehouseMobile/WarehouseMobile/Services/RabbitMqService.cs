@@ -10,11 +10,11 @@ using System.Text.Json;
 
 public class RabbitMqService : BackgroundService
 {
-    private readonly InWarehouseMobile _store;
-    private readonly IHubContext<WarehouseMobileHub> _hub;
+    private readonly InBookWarehouse _store;
+    private readonly IHubContext<BookWarehouseHub> _hub;
     private readonly IServiceScopeFactory _scopeFactory;
 
-    public RabbitMqService(InWarehouseMobile store, IHubContext<WarehouseMobileHub> hub, IServiceScopeFactory scopeFactory)
+    public RabbitMqService(InBookWarehouse store, IHubContext<BookWarehouseHub> hub, IServiceScopeFactory scopeFactory)
     {
         _store = store;
         _hub = hub;
@@ -35,7 +35,7 @@ public class RabbitMqService : BackgroundService
         consumer.Received += async (model, ea) =>
         {
             var json = Encoding.UTF8.GetString(ea.Body.ToArray());
-            var message = JsonSerializer.Deserialize<WarehouseMobileCreatedEvent>(json);
+            var message = JsonSerializer.Deserialize<BookWarehouseCreatedEvent>(json);
 
             if (message is not null)
             {
@@ -44,7 +44,7 @@ public class RabbitMqService : BackgroundService
                 using var scope = _scopeFactory.CreateScope();
                 var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
 
-                var entity = new WarehouseMobileCreatedEvent
+                var entity = new BookWarehouseCreatedEvent
                 {
                     BookId = message.BookId,
                     Title = message.Title,

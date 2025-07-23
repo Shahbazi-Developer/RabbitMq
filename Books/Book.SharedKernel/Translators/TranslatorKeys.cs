@@ -284,4 +284,20 @@ public class TranslatorKeys
     public const string HsCodeExel = nameof(HsCodeExel);
 
     #endregion
+
+
+
+    #region Book
+    public const string Author = nameof(Author);
+    public const string Publisher = nameof(Publisher);
+    public const string ISBN = nameof(ISBN);
+    public const string Language = nameof(Language);
+    public const string Genre = nameof(Genre);
+    public const string PublicationYear = nameof(PublicationYear);
+    public const string Edition = nameof(Edition);
+    public const string Price = nameof(Price);
+    public const string IsAvailable = nameof(IsAvailable);
+    public const string StockQuantity = nameof(StockQuantity);
+
+    #endregion
 }

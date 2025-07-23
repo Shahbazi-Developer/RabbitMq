@@ -7,7 +7,7 @@ namespace MobileView.Datas
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<WarehouseMobileCreatedEvent> Warehouse { get; set; }
+        public DbSet<BookWarehouseCreatedEvent> Warehouse { get; set; }
     }
     
 }

@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddRazorPages();
-builder.Services.AddSingleton<InWarehouseMobile>();
+builder.Services.AddSingleton<InBookWarehouse>();
 builder.Services.AddHostedService<RabbitMqService>();
 
 builder.Services.AddSignalR();
@@ -38,6 +38,6 @@ app.UseStaticFiles();
 app.MapRazorPages();
    //.WithStaticAssets();
 
-app.MapHub<WarehouseMobileHub>("/warehouseMobileHub");
+app.MapHub<BookWarehouseHub>("/warehouseMobileHub");
 
 app.Run();
