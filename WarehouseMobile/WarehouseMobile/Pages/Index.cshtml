@@ -1,10 +1,10 @@
 ﻿@page
 @model WarehouseMobile.Pages.IndexModel
 @{
-    ViewData["Title"] = "WarehouseBook from RabbitMQ";
+    ViewData["Title"] = "WarehouseMobile from RabbitMQ";
 }
 
-
+<!-- افزودن فونت فارسی Vazirmatn -->
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
 
 <style>
@@ -80,25 +80,25 @@
     }
 </style>
 
-<h2> Book Warehouse 📦</h2>
+<h2>📦 Warehouse</h2>
 
 <table>
     <thead>
         <tr>
-            <th>شناسه کتاب</th>
+            <th>📚 شناسه کتاب</th>
             <th>📘 عنوان</th>
             <th>✍️ نویسنده</th>
-            <th>📅 تاریخ</th>
+            <th>🕒 تاریخ ثبت</th>
         </tr>
     </thead>
     <tbody id="warehouseTableBody">
-        @foreach (var bookWrehouse in Model.Warehouses)
+        @foreach (var warehouseMobile in Model.Warehouses.OrderByDescending(x => x.CreationDate))
         {
             <tr>
-                <td>@bookWrehouse.BookId</td>
-                <td>@bookWrehouse.Title</td>
-                <td>@bookWrehouse.Author</td>
-                <td>@bookWrehouse.CreationDate.ToString("yyyy/MM/dd HH:mm")</td>
+                <td>@warehouseMobile.BookId</td>
+                <td>@warehouseMobile.Title</td>
+                <td>@warehouseMobile.Author</td>
+                <td>@warehouseMobile.CreationDate.ToString("yyyy/MM/dd HH:mm")</td>
             </tr>
         }
     </tbody>
@@ -108,22 +108,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
     <script>
         const connection = new signalR.HubConnectionBuilder()
-            .withUrl("/bookWarehouseHub")
+            .withUrl("/warehouseMobileHub")
             .build();
 
-        connection.on("ReceiveBookWarehouse", function (warehouseMobile) {
-            const table = document.getElementById("bookWarehouseTableBody");
+        connection.on("ReceiveWarehouseMobile", function (warehouseMobile) {
+            const table = document.getElementById("warehouseTableBody");
             const row = document.createElement("tr");
 
             row.innerHTML = `
-                <td>${bookWrehouse.bookId}</td>
-                <td>${bookWrehouse.title}</td>
-                <td>${bookWrehouse.author}</td>
-                <td>${new Date(bookWrehouse.creationDate).toLocaleString()}</td>
+                <td>${warehouseMobile.bookId}</td>
+                <td>${warehouseMobile.title}</td>
+                <td>${warehouseMobile.author}</td>
+                <td>${new Date(warehouseMobile.creationDate).toLocaleString()}</td>
             `;
 
-
-            table.appendChild(row);
+            table.prepend(row); // اضافه کردن به ابتدای جدول
         });
 
         connection.start().catch(err => console.error(err));

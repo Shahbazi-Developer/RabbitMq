@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Book.Infra.Data.Sql.Commands.Migrations
 {
     [DbContext(typeof(BookCommandDbContext))]
-    [Migration("20250721082927_initi")]
-    partial class initi
+    [Migration("20250723115938_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -45,6 +45,9 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<DateTime?>("CreatedDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("CreationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("Deleted")

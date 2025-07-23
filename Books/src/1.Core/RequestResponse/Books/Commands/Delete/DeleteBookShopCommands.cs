@@ -9,6 +9,6 @@ namespace Book.Core.RequestResponse.Books.Commands.Delete
 {
     public class DeleteBookShopCommands : ICommand
     {
-        public required int Id { get; set; }
+        public int Id { get; set; }
     }
 }

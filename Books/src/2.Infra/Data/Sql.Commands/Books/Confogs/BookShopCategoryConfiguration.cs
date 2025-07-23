@@ -13,6 +13,8 @@ namespace Book.Infra.Data.Sql.Commands.Books.Confogs
     {
         public void Configure(EntityTypeBuilder<BookShopCategory> builder)
         {
+
+            builder.HasKey(a => a.Id);
             builder.Property(a=>a.CategoryTitle).IsRequired();
             builder.Property(a=>a.Authors).IsRequired();
         }
