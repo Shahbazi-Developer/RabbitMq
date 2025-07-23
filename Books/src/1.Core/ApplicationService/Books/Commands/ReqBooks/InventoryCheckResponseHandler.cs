@@ -1,7 +1,7 @@
 ﻿using Book.Core.Contracts.Books;
 using Microsoft.Extensions.Logging;
 
-namespace MobileView.Services
+namespace Book.Core.ApplicationService.Books.Commands.ReqBooks
 {
     public class InventoryCheckResponseHandler
     {

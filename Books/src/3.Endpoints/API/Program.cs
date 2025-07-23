@@ -1,7 +1,7 @@
-﻿using Book.Core.Contracts.Books.Commands;
+﻿using Book.Core.ApplicationService.Books.Commands.ReqBooks;
+using Book.Core.Contracts.Books.Commands;
 using Book.Endpoints.API.Extentions;
-using Book.Infrastructure.MessageBus;
-using MobileView.Services;
+using Book.Infra.Data.Sql.Commands.MessageBus;
 using Zamin.Extensions.DependencyInjection;
 using Zamin.Utilities.SerilogRegistration.Extensions;
 
@@ -9,10 +9,10 @@ SerilogExtensions.RunWithSerilogExceptionHandling(() =>
 {
     var builder = WebApplication.CreateBuilder(args);
 
-    // 🔧 ثبت RabbitMQ Producer
+
     builder.Services.AddSingleton<IRabbitMqProducer, RabbitMqProducer>();
 
-    // ✅ افزودن هندلر و Consumer برای پاسخ انبار
+
     builder.Services.AddScoped<InventoryCheckResponseHandler>();
     builder.Services.AddHostedService<InventoryResponseConsumer>();
 

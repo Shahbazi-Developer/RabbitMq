@@ -1,14 +1,16 @@
-﻿using Book.Core.Contracts.Books;
+﻿using Book.Core.ApplicationService.Books.Commands.ReqBooks;
+using Book.Core.Contracts.Books;
+using Book.SharedKernel.Translators;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using MobileView.Services;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
 using System.Text.Json;
+using Zamin.Extensions.Translations.Abstractions;
 
-namespace Book.Infrastructure.MessageBus
+namespace Book.Infra.Data.Sql.Commands.MessageBus
 {
     public class InventoryResponseConsumer : BackgroundService
     {
@@ -16,11 +18,13 @@ namespace Book.Infrastructure.MessageBus
         private readonly ILogger<InventoryResponseConsumer> _logger;
         private IConnection? _connection;
         private IModel? _channel;
+        private readonly ITranslator _translator;
 
-        public InventoryResponseConsumer(IServiceProvider serviceProvider, ILogger<InventoryResponseConsumer> logger)
+        public InventoryResponseConsumer(IServiceProvider serviceProvider, ILogger<InventoryResponseConsumer> logger, ITranslator translator)
         {
             _serviceProvider = serviceProvider;
             _logger = logger;
+            _translator = translator;
             InitializeRabbitMq();
         }
 
@@ -55,8 +59,7 @@ namespace Book.Infrastructure.MessageBus
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, "خطا در دسیریالایز پیام پاسخ انبار");
-                    // ممکن است پیام معیوب باشد، می‌توان این پیام را Dead Letter کرد یا ثبت نمود
+                    _logger.Log(LogLevel.Information, _translator[TranslatorKeys.HANDLER_RUN_LOG, GetType().Name]);
                 }
 
                 if (response != null)
@@ -71,7 +74,7 @@ namespace Book.Infrastructure.MessageBus
 
             _channel.BasicConsume(queue: "inventory-responses", autoAck: false, consumer: consumer);
 
-            _logger.LogInformation("🚀 منتظر پیام‌های پاسخ انبار در صف inventory-responses هستیم...");
+            _logger.Log(LogLevel.Information, _translator[TranslatorKeys.HANDLER_RUN_LOG, GetType().Name]);
 
             return Task.CompletedTask;
         }

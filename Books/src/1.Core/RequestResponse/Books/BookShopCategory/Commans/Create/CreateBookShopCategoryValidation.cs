@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Book.Core.Resources;
+﻿using Book.SharedKernel.Translators;
 using FluentValidation;
 using Zamin.Extensions.Translations.Abstractions;
 
@@ -15,11 +10,11 @@ namespace Book.Core.RequestResponse.Books.BookShopCategory.Commans.Create
         {
             RuleFor(a => a.BookShopId)
                  .NotEmpty()
-                 .WithMessage(translator[ProjectValidationError.VALIDATION_ERROR_NOT_EMPTY, nameof(CreateBookShopCategoryCommand.BookShopId)]);
+                 .WithMessage(translator[TranslatorKeys.VALIDATION_ERROR_NOT_EMPTY, nameof(CreateBookShopCategoryCommand.BookShopId)]);
 
             RuleFor(a => a.Title)
                 .NotEmpty()
-                .WithMessage(translator[ProjectValidationError.VALIDATION_ERROR_NOT_EMPTY, nameof(CreateBookShopCategoryCommand.Title)]);
+                .WithMessage(translator[TranslatorKeys.VALIDATION_ERROR_NOT_EMPTY, nameof(CreateBookShopCategoryCommand.Title)]);
         }
     }
 }
