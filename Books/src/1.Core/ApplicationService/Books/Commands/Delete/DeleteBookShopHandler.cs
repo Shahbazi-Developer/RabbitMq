@@ -37,6 +37,7 @@ namespace Book.Core.ApplicationService.Books.Commands.Delete
 
                 throw new InvalidEntityStateException(_translator[TranslatorKeys.VALIDATION_ERROR_NOT_EXIST, nameof(command.Id)]);
             }
+
             entity.BookShopDeleted();
             await _commandRepository.CommitAsync();
             return Ok();

@@ -1,10 +1,14 @@
 ﻿using Book.Core.Contracts.Books.Commands;
 using Book.Core.Contracts.Books.DominService.ArticleGraphServices;
-using Book.Core.Domain.Books.Parameters;
-using Book.Core.RequestResponse.Books.BookShopCategory.Commans.Create;
+using Book.Core.Domain.Books.Parameters.BookShopCategory.Create;
+using Book.Core.RequestResponse.Books.Commands.BookShopCategory.Commans.Create;
+using Book.SharedKernel.Translators;
+using Microsoft.Extensions.Logging;
 using Zamin.Core.ApplicationServices.Commands;
+using Zamin.Core.Domain.Exceptions;
 using Zamin.Core.RequestResponse.Commands;
 using Zamin.Core.RequestResponse.Common;
+using Zamin.Extensions.Translations.Abstractions;
 using Zamin.Utilities;
 
 namespace Book.Core.ApplicationService.bookShopCategorys.Commands.Create
@@ -13,11 +17,20 @@ namespace Book.Core.ApplicationService.bookShopCategorys.Commands.Create
     {
         private readonly IBookShopCommandRepository _commandRepository;
         private readonly IBookShopGraphServeice _bookShopGraphServeice;
+        private readonly ITranslator _translator;
+        private readonly ILogger<CreateBookShopCategoryHandler> _logger;
 
-        public CreateBookShopCategoryHandler(ZaminServices zaminServices, IBookShopGraphServeice bookShopGraphServeice, IBookShopCommandRepository commandRepository) : base(zaminServices) 
+        public CreateBookShopCategoryHandler(ZaminServices zaminServices,
+                                             IBookShopCommandRepository commandRepository,
+                                             IBookShopGraphServeice bookShopGraphServeice,
+                                             ITranslator translator,
+                                             ILogger<CreateBookShopCategoryHandler> logger) : base(zaminServices)
         {
-            _bookShopGraphServeice = bookShopGraphServeice;
+
             _commandRepository = commandRepository;
+            _bookShopGraphServeice = bookShopGraphServeice;
+            _translator = translator;
+            _logger = logger;
         }
 
         public override async Task<CommandResult> Handle(CreateBookShopCategoryCommand command)
@@ -26,16 +39,23 @@ namespace Book.Core.ApplicationService.bookShopCategorys.Commands.Create
             {
                 BookShopId = command.BookShopId,
             };
+
             var result = await _bookShopGraphServeice.GetGraph(bookShopGraphModels);
+
             if(!result.IsSuccess)
             {
-                AddMessage("not Id");
-                return Result(ApplicationServiceStatus.ValidationError);
+                _logger.Log(LogLevel.Information, _translator[TranslatorKeys.HANDLER_RUN_LOG, GetType().Name]);
+
+                throw new InvalidEntityStateException(_translator[TranslatorKeys.VALIDATION_ERROR_NOT_EXIST, nameof(command.BookShopId)]);
             }
+
             var bookShop = result.Result;
+
             CreateBookShopCategoryParameter parameter = new(command.Title, command.Authors);
+
             bookShop.CreateBookShopCategory(parameter);
             await _commandRepository.CommitAsync();
+
             return Ok();
         }
     }

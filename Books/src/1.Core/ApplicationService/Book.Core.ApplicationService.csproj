@@ -14,8 +14,4 @@
 		  <ProjectReference Include="..\Contracts\Book.Core.Contracts.csproj" />
 		</ItemGroup>
 
-		<ItemGroup>
-		  <Folder Include="Books\Commands\NewFolder\" />
-		</ItemGroup>
-
 </Project>

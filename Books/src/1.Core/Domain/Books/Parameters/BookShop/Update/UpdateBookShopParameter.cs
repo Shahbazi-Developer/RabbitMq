@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Book.Core.Domain.Books.Parameters
+namespace Book.Core.Domain.Books.Parameters.BookShop.Update
 {
-    public record DeleteBookShopParameter(string title,
+    public record UpdateBookShopParameter(string title,
                                           string author,
                                           string publisher,
                                           string iSBN,
@@ -16,6 +16,7 @@ namespace Book.Core.Domain.Books.Parameters
                                           int edition,
                                           decimal price,
                                           bool isAvailable,
-                                          int stockQuantity);
+                                          int stockQuantity,
+                                          DateTime creationDate);
 
 }

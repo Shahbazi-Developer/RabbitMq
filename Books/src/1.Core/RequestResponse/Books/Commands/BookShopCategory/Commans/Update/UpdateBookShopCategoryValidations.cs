@@ -2,7 +2,7 @@
 using FluentValidation;
 using Zamin.Extensions.Translations.Abstractions;
 
-namespace Book.Core.RequestResponse.Books.BookShopCategory.Commans.Update
+namespace Book.Core.RequestResponse.Books.Commands.BookShopCategory.Commans.Update
 {
     public class UpdateBookShopCategoryValidations : AbstractValidator<UpadateBookShopCategoryCommand>
     {

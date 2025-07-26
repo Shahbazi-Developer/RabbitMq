@@ -1,5 +1,5 @@
-﻿using Book.Core.RequestResponse.Books.BookShopCategory.Commans.Create;
-using Book.Core.RequestResponse.Books.BookShopCategory.Commans.Update;
+﻿using Book.Core.RequestResponse.Books.Commands.BookShopCategory.Commans.Create;
+using Book.Core.RequestResponse.Books.Commands.BookShopCategory.Commans.Update;
 using Microsoft.AspNetCore.Mvc;
 using Zamin.EndPoints.Web.Controllers;
 

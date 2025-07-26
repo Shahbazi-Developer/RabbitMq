@@ -1,4 +1,5 @@
-﻿using Book.Core.Domain.Books.Parameters;
+﻿using Book.Core.Domain.Books.Parameters.BookShopCategory.Create;
+using Book.Core.Domain.Books.Parameters.BookShopCategory.Update;
 using Zamin.Core.Domain.Entities;
 
 namespace Book.Core.Domain.Books.Entitie

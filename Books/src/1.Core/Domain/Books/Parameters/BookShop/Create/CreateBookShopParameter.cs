@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Book.Core.Domain.Books.Parameters
+namespace Book.Core.Domain.Books.Parameters.BookShop.Create
 {
     public record CreateBookShopParameter (string title,
                                           string author,

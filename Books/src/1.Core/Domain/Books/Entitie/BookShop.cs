@@ -1,5 +1,10 @@
-﻿using Book.Core.Domain.Books.Parameters;
+﻿using Book.Core.Domain.Books.Parameters.BookShop.Create;
+using Book.Core.Domain.Books.Parameters.BookShop.Update;
+using Book.Core.Domain.Books.Parameters.BookShopCategory.Create;
+using Book.Core.Domain.Books.Parameters.BookShopCategory.Update;
 using Zamin.Core.Domain.Entities;
+using Zamin.Core.Domain.Exceptions;
+using Zamin.Utilities.Resources.Translators;
 
 namespace Book.Core.Domain.Books.Entitie
 {
@@ -68,12 +73,22 @@ namespace Book.Core.Domain.Books.Entitie
 
         public void CreateBookShopCategory(CreateBookShopCategoryParameter parameter)
         {
+            if (parameter == null)
+            {
+                throw new InvalidEntityStateException(TranslatorKeys.VALIDATION_ERROR_NOT_NULL);
+            }
+
             BookShopCategory bookShopCategory = new(parameter);
             _bookShopCategory.Add(bookShopCategory);
         }
 
         public void UpdateBookShopCategory(UpdateBookShopCategoryParameter parameter)
         {
+            if (parameter == null)
+            {
+                throw new InvalidEntityStateException(TranslatorKeys.VALIDATION_ERROR_NOT_NULL);
+            }
+
             var entity = _bookShopCategory.First(a => a.Id == parameter.bookShopCategoryId);
             entity.Update(parameter);
         }

@@ -1,6 +1,7 @@
 ﻿using Book.Core.Contracts.Books.Commands;
 using Book.Core.Domain.Books.Entitie;
 using Book.Core.Domain.Books.Parameters;
+using Book.Core.Domain.Books.Parameters.BookShop.Create;
 using Book.Core.RequestResponse.Books.Commands.Create;
 using Zamin.Core.ApplicationServices.Commands;
 using Zamin.Core.RequestResponse.Commands;
@@ -15,8 +16,7 @@ namespace Book.Core.ApplicationService.Books.Commands.Create
 
         public CreateBookShopeHandler(ZaminServices zaminServices,
                                       IBookShopCommandRepository commandRepository,
-                                      IRabbitMqProducer rabbitMqProducer)
-            : base(zaminServices)
+                                      IRabbitMqProducer rabbitMqProducer) : base(zaminServices)
         {
             _commandRepository = commandRepository;
             _rabbitMqProducer = rabbitMqProducer;
