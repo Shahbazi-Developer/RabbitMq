@@ -4,7 +4,6 @@
     ViewData["Title"] = "WarehouseMobile from RabbitMQ";
 }
 
-<!-- افزودن فونت فارسی Vazirmatn -->
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
 
 <style>
@@ -25,6 +24,45 @@
         color: #2c3e50;
         letter-spacing: 1.2px;
         text-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .filter-form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+        justify-content: center;
+        max-width: 1000px;
+        margin-inline: auto;
+    }
+
+    .filter-form .input {
+        padding: 8px 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1rem;
+    }
+
+    .filter-form .btn {
+        padding: 8px 16px;
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+
+    .filter-form .btn:hover {
+        background-color: #357ABD;
+    }
+
+    .filter-summary {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #444;
+        font-size: 1.1rem;
     }
 
     table {
@@ -58,10 +96,10 @@
         border-radius: 10px;
     }
 
-        tbody tr:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-        }
+    tbody tr:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
 
     tbody td {
         padding: 18px 20px;
@@ -71,28 +109,46 @@
         border-right: 1px solid #e0e0e0;
     }
 
-        tbody td:last-child {
-            border-right: none;
-        }
-
-    tbody tr + tr {
-        margin-top: 12px;
+    tbody td:last-child {
+        border-right: none;
     }
 </style>
 
-<h2>📦 Warehouse</h2>
+<h2>📦 اطلاعات انبار کتاب</h2>
+
+<form method="get" class="filter-form">
+    <input type="text" name="SearchTerm" id="searchBox" placeholder="🔍 جستجو عنوان یا نویسنده"
+           value="@Model.SearchTerm" class="input" />
+    <input type="date" name="FromDate" value="@(Model.FromDate?.ToString("yyyy-MM-dd"))" class="input" />
+    <input type="date" name="ToDate" value="@(Model.ToDate?.ToString("yyyy-MM-dd"))" class="input" />
+    
+</form>
+
+@if (Model.FromDate.HasValue || Model.ToDate.HasValue)
+{
+    <div class="filter-summary">
+        @if (Model.FromDate.HasValue)
+        {
+            <span>از تاریخ @Model.FromDate.Value.ToString("yyyy/MM/dd") </span>
+        }
+        @if (Model.ToDate.HasValue)
+        {
+            <span>تا تاریخ @Model.ToDate.Value.ToString("yyyy/MM/dd")</span>
+        }
+    </div>
+}
 
 <table>
     <thead>
         <tr>
-                <th>📚 شناسه کتاب</th>
+            <th>📚 شناسه کتاب</th>
             <th>📘 عنوان</th>
             <th>✍️ نویسنده</th>
             <th>🕒 تاریخ ثبت</th>
         </tr>
     </thead>
     <tbody id="warehouseTableBody">
-        @foreach (var warehouseMobile in Model.Warehouses.OrderByDescending(x => x.CreationDate))
+        @foreach (var warehouseMobile in Model.Warehouses)
         {
             <tr>
                 <td>@warehouseMobile.BookId</td>
@@ -122,9 +178,26 @@
                 <td>${new Date(warehouseMobile.creationDate).toLocaleString()}</td>
             `;
 
-            table.prepend(row); // اضافه کردن به ابتدای جدول
+            table.prepend(row);
         });
 
         connection.start().catch(err => console.error(err));
+
+        // جستجوی خودکار هنگام تایپ در فیلد جستجو
+        const searchBox = document.getElementById('searchBox');
+        let timer;
+        searchBox.addEventListener('input', function () {
+            clearTimeout(timer);
+            timer = setTimeout(() => {
+                const url = new URL(window.location.href);
+                const search = searchBox.value.trim();
+                if (search !== '') {
+                    url.searchParams.set('SearchTerm', search);
+                } else {
+                    url.searchParams.delete('SearchTerm');
+                }
+                window.location.href = url.toString();
+            }, 600);
+        });
     </script>
 }

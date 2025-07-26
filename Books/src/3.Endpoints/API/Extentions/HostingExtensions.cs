@@ -28,7 +28,7 @@ public static class HostingExtensions
         builder.Services.AddZaminParrotTranslator(configuration, "ParrotTranslator");
 
         //zamin
-        //builder.Services.AddSoftwarePartDetector(configuration, "SoftwarePart");
+        builder.Services.AddSoftwarePartDetector(configuration, "SoftwarePart");
 
         //zamin
         builder.Services.AddNonValidatingValidator();
