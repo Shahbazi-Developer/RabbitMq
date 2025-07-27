@@ -12,7 +12,7 @@ using MobileView.Datas;
 namespace WarehouseMobile.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250727102250_init")]
+    [Migration("20250727151342_init")]
     partial class init
     {
         /// <inheritdoc />
