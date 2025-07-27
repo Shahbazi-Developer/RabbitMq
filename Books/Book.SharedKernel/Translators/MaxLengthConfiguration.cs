@@ -198,6 +198,11 @@ public class MaxLengthConfiguration
     public const byte PUBLISHER_MAXLENGTHS = 100;
     public const byte LANGUAGE_MAXLENGTHS = 100;
     public const byte GENRE_MAXLENGTHS = 50;
+    public const byte ISBN_MAXLENGTHS = 100;
+    public const byte PUBLICATION_YEAR__MAXLENGTHS = 50;
+    public const byte EDITION_MAXLENGTHS = 50;
+    public const byte PRICE_MAXLENGTHS = 50;
+    public const byte STOCK_QUANTITY_MAXLENGTHS = 100;
 
 
     #region Season
@@ -210,8 +215,6 @@ public class MaxLengthConfiguration
 
 
     #region Book
-
-
 
     #endregion
 

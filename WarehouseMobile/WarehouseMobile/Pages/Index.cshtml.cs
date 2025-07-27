@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace WarehouseMobile.Pages
 {
-    public class IndexModel : PageModel
+     public class IndexModel : PageModel
     {
         private readonly AppDbContext _db;
 

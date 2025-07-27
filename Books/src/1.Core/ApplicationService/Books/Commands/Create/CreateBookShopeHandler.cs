@@ -35,7 +35,8 @@ namespace Book.Core.ApplicationService.Books.Commands.Create
                                                         command.Price,
                                                         command.IsAvailable,
                                                         command.StockQuantity,
-                                                        command.CreationDate);
+                                                        command.CreationDate,
+                                                        command.Description);
 
             var bookShop = new BookShop(parameter);
             await _commandRepository.InsertAsync(bookShop);

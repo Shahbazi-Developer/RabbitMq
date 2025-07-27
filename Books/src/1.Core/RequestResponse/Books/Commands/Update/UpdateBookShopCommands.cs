@@ -17,5 +17,6 @@ namespace Book.Core.RequestResponse.Books.Commands.Update
         public required bool IsAvailable { get; set; }
         public required int StockQuantity { get; set; }
         public required DateTime CreationDate { get; set; }
+        public required string Description { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Book.Core.ApplicationService.Books.Commands.ReqBooks;
-using Book.Core.Contracts.Books;
+using Book.Core.Contracts.Books.Events;
 using Book.SharedKernel.Translators;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

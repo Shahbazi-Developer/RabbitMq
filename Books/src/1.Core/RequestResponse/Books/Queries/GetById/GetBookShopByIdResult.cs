@@ -15,5 +15,6 @@
         public bool IsAvailable { get; set; }
         public int StockQuantity { get; set; }
         public bool Deleted { get; set; }
+        public string? Description { get; set; }
     }
 }

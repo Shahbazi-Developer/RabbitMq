@@ -10,19 +10,20 @@ namespace Book.Core.Domain.Books.Entitie
 {
     public class BookShop : AggregateRoot<int>
     {
-        public string Title { get; private set; }
-        public string Author { get; private set; }
-        public string Publisher { get; private set; }
-        public string ISBN { get; private set; }
-        public string Language { get; private set; }
-        public string Genre { get; private set; }
-        public int PublicationYear { get; private set; }
-        public int Edition { get; private set; }
-        public decimal Price { get; private set; }
-        public bool IsAvailable { get; private set; }
-        public int StockQuantity { get; private set; }
+        public string? Title { get; private set; }
+        public string? Author { get; private set; }
+        public string? Publisher { get; private set; }
+        public string? ISBN { get; private set; }
+        public string? Language { get; private set; }
+        public string? Genre { get; private set; }
+        public int? PublicationYear { get; private set; }
+        public int? Edition { get; private set; }
+        public decimal? Price { get; private set; }
+        public bool? IsAvailable { get; private set; }
+        public int? StockQuantity { get; private set; }
         public bool Deleted { get; private set; }
         public DateTime? CreationDate { get; private set; }
+        public string? Description { get; private set; }
 
         private readonly List<BookShopCategory> _bookShopCategory = new List<BookShopCategory>();
         public IReadOnlyList<BookShopCategory> BookShopCategory => _bookShopCategory.AsReadOnly();
@@ -45,6 +46,7 @@ namespace Book.Core.Domain.Books.Entitie
             IsAvailable = parameter.isAvailable;
             StockQuantity = parameter.stockQuantity;
             CreationDate = parameter.creationDate;
+            Description = parameter.description;
 
 
         }
@@ -63,6 +65,7 @@ namespace Book.Core.Domain.Books.Entitie
             IsAvailable = parameter.isAvailable;
             StockQuantity = parameter.stockQuantity;
             CreationDate = parameter.creationDate;
+            Description= parameter.description;
             
         }
 

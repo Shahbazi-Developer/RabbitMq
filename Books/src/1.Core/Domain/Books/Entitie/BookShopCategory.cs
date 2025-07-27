@@ -6,9 +6,9 @@ namespace Book.Core.Domain.Books.Entitie
 {
     public class BookShopCategory : Entity<int>
     {
-        public string CategoryTitle { get; private set; }
-        public DateTime CreationDate { get; private set; }
-        public string Authors { get; private set; }
+        public string? CategoryTitle { get; private set; }
+        public DateTime? CreationDate { get; private set; }
+        public string? Authors { get; private set; }
         
         private BookShopCategory()
         {

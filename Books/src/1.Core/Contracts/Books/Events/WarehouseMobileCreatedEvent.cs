@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Book.Core.Contracts.Books
+namespace Book.Core.Contracts.Books.Events
 {
     public class WarehouseMobileCreatedEvent
     {

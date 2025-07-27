@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Book.Core.Domain.Books.Entitie;
+using Book.SharedKernel.Translators;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Book.Core.Domain.Books.Entitie;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Book.Infra.Data.Sql.Commands.Books.Confogs
 {
@@ -13,10 +14,13 @@ namespace Book.Infra.Data.Sql.Commands.Books.Confogs
     {
         public void Configure(EntityTypeBuilder<BookShopCategory> builder)
         {
-
+            builder.ToTable("BookShopCategorys");
             builder.HasKey(a => a.Id);
-            builder.Property(a=>a.CategoryTitle).IsRequired();
-            builder.Property(a=>a.Authors).IsRequired();
+
+
+            builder.Property(a=>a.CategoryTitle).IsRequired(false).HasMaxLength(MaxLengthConfiguration.GOODS_TITLE_MAXLENGTHS).HasColumnName(nameof(BookShopCategory.CategoryTitle));
+
+            builder.Property(a=>a.Authors).IsRequired(false).HasMaxLength(MaxLengthConfiguration.AUTHOR_MAXLENGTHS).HasColumnName(nameof(BookShopCategory.Authors));
         }
     }
 }

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Book.Infra.Data.Sql.Commands.Migrations
 {
     [DbContext(typeof(BookCommandDbContext))]
-    [Migration("20250723115938_init")]
+    [Migration("20250727152351_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -34,8 +34,9 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Author")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("Author");
 
                     b.Property<Guid>("BusinessId")
                         .HasColumnType("uniqueidentifier");
@@ -53,23 +54,34 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
                     b.Property<bool>("Deleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Edition")
-                        .HasColumnType("int");
+                    b.Property<string>("Description")
+                        .HasMaxLength(3000)
+                        .HasColumnType("nvarchar(3000)")
+                        .HasColumnName("Description");
+
+                    b.Property<int?>("Edition")
+                        .HasMaxLength(50)
+                        .HasColumnType("int")
+                        .HasColumnName("Edition");
 
                     b.Property<string>("Genre")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("Genre");
 
                     b.Property<string>("ISBN")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("ISBN");
 
-                    b.Property<bool>("IsAvailable")
-                        .HasColumnType("bit");
+                    b.Property<bool?>("IsAvailable")
+                        .HasColumnType("bit")
+                        .HasColumnName("IsAvailable");
 
                     b.Property<string>("Language")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("Language");
 
                     b.Property<string>("ModifiedByUserId")
                         .HasMaxLength(50)
@@ -78,26 +90,34 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
                     b.Property<DateTime?>("ModifiedDateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<decimal?>("Price")
+                        .HasMaxLength(50)
+                        .HasColumnType("decimal(18,2)")
+                        .HasColumnName("Price");
 
-                    b.Property<int>("PublicationYear")
-                        .HasColumnType("int");
+                    b.Property<int?>("PublicationYear")
+                        .HasMaxLength(50)
+                        .HasColumnType("int")
+                        .HasColumnName("PublicationYear");
 
                     b.Property<string>("Publisher")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("Publisher");
 
-                    b.Property<int>("StockQuantity")
-                        .HasColumnType("int");
+                    b.Property<int?>("StockQuantity")
+                        .HasMaxLength(100)
+                        .HasColumnType("int")
+                        .HasColumnName("StockQuantity");
 
                     b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)")
+                        .HasColumnName("Title");
 
                     b.HasKey("Id");
 
-                    b.ToTable("BookShop");
+                    b.ToTable("BookShops", (string)null);
                 });
 
             modelBuilder.Entity("Book.Core.Domain.Books.Entitie.BookShopCategory", b =>
@@ -109,8 +129,9 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Authors")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)")
+                        .HasColumnName("Authors");
 
                     b.Property<int?>("BookShopId")
                         .HasColumnType("int");
@@ -119,8 +140,9 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CategoryTitle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(400)
+                        .HasColumnType("nvarchar(400)")
+                        .HasColumnName("CategoryTitle");
 
                     b.Property<string>("CreatedByUserId")
                         .HasMaxLength(50)
@@ -129,7 +151,7 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
                     b.Property<DateTime?>("CreatedDateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("CreationDate")
+                    b.Property<DateTime?>("CreationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ModifiedByUserId")
@@ -143,7 +165,7 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
 
                     b.HasIndex("BookShopId");
 
-                    b.ToTable("BookShopCategory");
+                    b.ToTable("BookShopCategorys", (string)null);
                 });
 
             modelBuilder.Entity("Zamin.Extensions.Events.Abstractions.OutBoxEventItem", b =>

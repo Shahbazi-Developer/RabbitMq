@@ -12,7 +12,7 @@ using MobileView.Datas;
 namespace WarehouseMobile.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250722142928_init")]
+    [Migration("20250727102250_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace WarehouseMobile.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("MobileView.Models.WarehouseMobileCreatedEvent", b =>
+            modelBuilder.Entity("MobileView.Models.BookWarehouseCreatedEvent", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()

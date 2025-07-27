@@ -17,7 +17,7 @@ public class BookCommandDbContext : BaseOutboxCommandDbContext
         base.OnModelCreating(builder);
     }
 
-    public DbSet<BookShop> BookShop { get; set; }
-    public DbSet<BookShopCategory> BookShopCategory { get; set; }
+    public DbSet<BookShop> BookShops { get; set; }
+    public DbSet<BookShopCategory> BookShopCategorys { get; set; }
 
 }

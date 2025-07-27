@@ -22,7 +22,7 @@ namespace WarehouseMobile.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("MobileView.Models.WarehouseMobileCreatedEvent", b =>
+            modelBuilder.Entity("MobileView.Models.BookWarehouseCreatedEvent", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()

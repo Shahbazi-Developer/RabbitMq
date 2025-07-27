@@ -10,7 +10,7 @@ SerilogExtensions.RunWithSerilogExceptionHandling(() =>
     var builder = WebApplication.CreateBuilder(args);
 
 
-    builder.Services.AddSingleton<IRabbitMqProducer, RabbitMqProducer>();
+    builder.Services.AddSingleton<IRabbitMqProducer, Book.Infra.Data.Sql.Commands.MessageBus.RabbitMqProducer>();
 
 
     builder.Services.AddScoped<InventoryCheckResponseHandler>();

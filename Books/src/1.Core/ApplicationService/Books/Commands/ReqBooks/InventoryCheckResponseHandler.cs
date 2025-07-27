@@ -1,4 +1,4 @@
-﻿using Book.Core.Contracts.Books;
+﻿using Book.Core.Contracts.Books.Events;
 using Book.SharedKernel.Translators;
 using Microsoft.Extensions.Logging;
 using Zamin.Extensions.Translations.Abstractions;

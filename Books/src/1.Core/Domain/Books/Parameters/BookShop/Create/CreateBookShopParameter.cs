@@ -17,6 +17,7 @@ namespace Book.Core.Domain.Books.Parameters.BookShop.Create
                                           decimal price,
                                           bool isAvailable,
                                           int stockQuantity,
-                                          DateTime creationDate);
+                                          DateTime creationDate,
+                                          string description);
 
 }

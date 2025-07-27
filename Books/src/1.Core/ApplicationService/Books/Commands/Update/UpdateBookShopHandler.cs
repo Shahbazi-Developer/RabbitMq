@@ -53,7 +53,8 @@ namespace Book.Core.ApplicationService.Books.Commands.Update
                                                     command.Price,
                                                     command.IsAvailable,
                                                     command.StockQuantity,
-                                                    command.CreationDate);
+                                                    command.CreationDate,
+                                                    command.Description);
 
             entity.Update(parameter);
 

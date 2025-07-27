@@ -15,6 +15,8 @@ namespace Book.Endpoints.API.BookShops
     [ApiController]
     public class BookShopController : BaseController
     {
+
+        #region Command
         [HttpPost("Create")]
         public async Task<IActionResult> Create([FromBody] CreateBookShopCommands command)
         {
@@ -28,6 +30,8 @@ namespace Book.Endpoints.API.BookShops
         [HttpDelete("Delete")]
         public async Task<IActionResult> DeleteMobile([FromBody] DeleteBookShopCommands command)
             => await Delete(command);
+        #endregion
+
 
 
         #region Queries

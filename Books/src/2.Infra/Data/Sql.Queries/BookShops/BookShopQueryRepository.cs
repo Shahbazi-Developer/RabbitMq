@@ -2,6 +2,7 @@
 using Book.Core.RequestResponse.Books.Queries.GetById;
 using Book.Core.RequestResponse.Books.Queries.GetList;
 using Book.Core.RequestResponse.Books.Queries.GetPageFilter;
+using Book.Infra.Data.Sql.Queries.BookShops.Entities;
 using Book.Infra.Data.Sql.Queries.Common;
 using Microsoft.EntityFrameworkCore;
 using Zamin.Core.RequestResponse.Queries;
@@ -10,6 +11,8 @@ using Zamin.Utilities.Extensions;
 
 namespace Book.Infra.Data.Sql.Queries.BookShops
 {
+
+    #region BookShop
     public class BookShopQueryRepository : BaseQueryRepository<BookQueryDbContext>, IBookShopQueryRepository
     {
         public BookShopQueryRepository(BookQueryDbContext options) : base(options)
@@ -19,44 +22,18 @@ namespace Book.Infra.Data.Sql.Queries.BookShops
 
         public async Task<GetBookShopByIdResult?> GetBookShopById(GetBookShopByIdQuery query)
         {
-            return await _dbContext.BookShop.Select(x => new GetBookShopByIdResult
-            {
-                Id = x.Id,
-                Author = x.Author,
-                Deleted = x.Deleted,
-                Edition = x.Edition,
-                Genre = x.Genre,
-                IsAvailable = x.IsAvailable,
-                ISBN = x.ISBN,
-                Language = x.Language,
-                Price = x.Price,
-                PublicationYear = x.PublicationYear,
-                Publisher = x.Publisher,
-                StockQuantity = x.StockQuantity,
-                Title = x.Title
-            }).FirstOrDefaultAsync(x => x.Id == query.Id);
+            return await _dbContext.Set<BookShop>().Where(bookShop => bookShop.Id == query.Id && !bookShop.Deleted)
+           .Select(bookShop => (GetBookShopByIdResult)bookShop)
+           .FirstOrDefaultAsync();
         }
 
 
         public async Task<PagedData<GetBookShopPageFilterResult>> GetBookShopPageFilter(GetBookShopPageFilterQuery query)
         {
-            var filter = _dbContext.BookShop.Select(x => new GetBookShopPageFilterResult
-            {
-                Id = x.Id,
-                Author = x.Author,
-                Deleted = x.Deleted,
-                Edition = x.Edition,
-                Genre = x.Genre,
-                IsAvailable = x.IsAvailable,
-                ISBN = x.ISBN,
-                Language = x.Language,
-                Price = x.Price,
-                PublicationYear = x.PublicationYear,
-                Publisher = x.Publisher,
-                StockQuantity = x.StockQuantity,
-                Title = x.Title
+            var filter = _dbContext.Set<BookShop>()
+            .Where(x => !x.Deleted)
+            .AsQueryable();
 
-            }).AsQueryable();
 
             if (!string.IsNullOrWhiteSpace(query.Title))
             {
@@ -64,29 +41,23 @@ namespace Book.Infra.Data.Sql.Queries.BookShops
             }
 
 
-            return await filter.ToPagedData(query, x => x);
+            return await filter.ToPagedData(query, bookShop => (GetBookShopPageFilterResult)bookShop);
+
         }
 
 
         public async Task<List<GetBookShopListResult>> GetList(GetBookShopListQuery query)
         {
-            return await _dbContext.BookShop.Select(x => new GetBookShopListResult
-            {
-                Id = x.Id,
-                Author = x.Author,
-                Deleted = x.Deleted,
-                Edition = x.Edition,
-                Genre = x.Genre,
-                IsAvailable = x.IsAvailable,
-                ISBN = x.ISBN,
-                Language = x.Language,
-                Price = x.Price,
-                PublicationYear = x.PublicationYear,
-                Publisher = x.Publisher,
-                StockQuantity = x.StockQuantity,
-                Title = x.Title
-
-            }).ToListAsync();
+            return await _dbContext.Set<BookShop>()
+          .Where(x => !x.Deleted)
+          .Select(bookShop => (GetBookShopListResult)bookShop)
+          .ToListAsync();
         }
     }
+
+
+    #endregion
+
+
+
 }

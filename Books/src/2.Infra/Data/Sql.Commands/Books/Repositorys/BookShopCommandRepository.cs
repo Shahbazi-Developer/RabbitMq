@@ -10,7 +10,7 @@ using Book.Infra.Data.Sql.Commands.Common;
 using Microsoft.EntityFrameworkCore;
 using Zamin.Infra.Data.Sql.Commands;
 
-namespace Book.Infra.Data.Sql.Commands.Books
+namespace Book.Infra.Data.Sql.Commands.Books.Repositorys
 {
     public class BookShopCommandRepository : BaseCommandRepository<BookShop, BookCommandDbContext, int>, IBookShopCommandRepository
     {

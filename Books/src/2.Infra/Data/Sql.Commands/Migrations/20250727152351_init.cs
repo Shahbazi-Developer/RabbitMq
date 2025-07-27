@@ -15,24 +15,25 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
                 name: "zamin");
 
             migrationBuilder.CreateTable(
-                name: "BookShop",
+                name: "BookShops",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Publisher = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ISBN = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Language = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Genre = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PublicationYear = table.Column<int>(type: "int", nullable: false),
-                    Edition = table.Column<int>(type: "int", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    IsAvailable = table.Column<bool>(type: "bit", nullable: false),
-                    StockQuantity = table.Column<int>(type: "int", nullable: false),
+                    Title = table.Column<string>(type: "nvarchar(400)", maxLength: 400, nullable: true),
+                    Author = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Publisher = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    ISBN = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Language = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
+                    Genre = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    PublicationYear = table.Column<int>(type: "int", maxLength: 50, nullable: true),
+                    Edition = table.Column<int>(type: "int", maxLength: 50, nullable: true),
+                    Price = table.Column<decimal>(type: "decimal(18,2)", maxLength: 50, nullable: true),
+                    IsAvailable = table.Column<bool>(type: "bit", nullable: true),
+                    StockQuantity = table.Column<int>(type: "int", maxLength: 100, nullable: true),
                     Deleted = table.Column<bool>(type: "bit", nullable: false),
                     CreationDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(3000)", maxLength: 3000, nullable: true),
                     CreatedByUserId = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     CreatedDateTime = table.Column<DateTime>(type: "datetime2", nullable: true),
                     ModifiedByUserId = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
@@ -41,7 +42,7 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BookShop", x => x.Id);
+                    table.PrimaryKey("PK_BookShops", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -70,14 +71,14 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BookShopCategory",
+                name: "BookShopCategorys",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CategoryTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Authors = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CategoryTitle = table.Column<string>(type: "nvarchar(400)", maxLength: 400, nullable: true),
+                    CreationDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Authors = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     BookShopId = table.Column<int>(type: "int", nullable: true),
                     CreatedByUserId = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     CreatedDateTime = table.Column<DateTime>(type: "datetime2", nullable: true),
@@ -87,17 +88,17 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BookShopCategory", x => x.Id);
+                    table.PrimaryKey("PK_BookShopCategorys", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BookShopCategory_BookShop_BookShopId",
+                        name: "FK_BookShopCategorys_BookShops_BookShopId",
                         column: x => x.BookShopId,
-                        principalTable: "BookShop",
+                        principalTable: "BookShops",
                         principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_BookShopCategory_BookShopId",
-                table: "BookShopCategory",
+                name: "IX_BookShopCategorys_BookShopId",
+                table: "BookShopCategorys",
                 column: "BookShopId");
         }
 
@@ -105,14 +106,14 @@ namespace Book.Infra.Data.Sql.Commands.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "BookShopCategory");
+                name: "BookShopCategorys");
 
             migrationBuilder.DropTable(
                 name: "OutBoxEventItems",
                 schema: "zamin");
 
             migrationBuilder.DropTable(
-                name: "BookShop");
+                name: "BookShops");
         }
     }
 }
