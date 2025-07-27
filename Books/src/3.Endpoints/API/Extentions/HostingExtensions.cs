@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Cors.Infrastructure;
+﻿using Book.Infra.Data.Sql.Commands.Common;
+using Book.Infra.Data.Sql.Commands.Common.ParrotTranslatorinitializers;
+using Book.Infra.Data.Sql.Queries.Common;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Zamin.EndPoints.Web.Extensions.ModelBinding;
 using Zamin.Extensions.DependencyInjection;
 using Zamin.Infra.Data.Sql.Commands.Interceptors;
-using Book.Infra.Data.Sql.Commands.Common;
-using Book.Infra.Data.Sql.Queries.Common;
 
 namespace Book.Endpoints.API.Extentions;
 
@@ -23,6 +24,12 @@ public static class HostingExtensions
 
         //zamin
         builder.Services.AddZaminWebUserInfoService(configuration, "WebUserInfo", true);
+
+
+        var parrotTranslatorSection = configuration.GetSection("ParrotTranslator");
+        ParrotTranslatorInitializer.Initialize(parrotTranslatorSection.GetValue<string>("ConnectionString"),
+                                              parrotTranslatorSection.GetValue<string>("SchemaName"),
+                                              parrotTranslatorSection.GetValue<string>("TableName"));
 
         //zamin
         builder.Services.AddZaminParrotTranslator(configuration, "ParrotTranslator");
