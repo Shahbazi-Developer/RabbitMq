@@ -1,9 +1,9 @@
-﻿using Book.Core.RequestResponse.Books.Commands.Create;
-using Book.Core.RequestResponse.Books.Commands.Delete;
-using Book.Core.RequestResponse.Books.Commands.Update;
-using Book.Core.RequestResponse.Books.Queries.GetById;
-using Book.Core.RequestResponse.Books.Queries.GetList;
-using Book.Core.RequestResponse.Books.Queries.GetPageFilter;
+﻿using Book.Core.RequestResponse.Books.Commands.BookShop.Create;
+using Book.Core.RequestResponse.Books.Commands.BookShop.Delete;
+using Book.Core.RequestResponse.Books.Commands.BookShop.Update;
+using Book.Core.RequestResponse.Books.Queries.BookShop.GetById;
+using Book.Core.RequestResponse.Books.Queries.BookShop.GetList;
+using Book.Core.RequestResponse.Books.Queries.BookShop.GetPageFilter;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Zamin.Core.RequestResponse.Queries;
@@ -17,41 +17,39 @@ namespace Book.Endpoints.API.BookShops
     {
 
         #region Command
-        [HttpPost("Create")]
-        public async Task<IActionResult> Create([FromBody] CreateBookShopCommands command)
-        {
-            return await Create<CreateBookShopCommands>(command);
-        }
 
-        [HttpPut("Update")]
-        public async Task<IActionResult> UpdateMobile([FromBody] UpdateBookShopCommands command)
+        [HttpPost("CreateBookShop")]
+        public async Task<IActionResult> CreateBookShop([FromBody] CreateBookShopCommands command)
+           => await Create<CreateBookShopCommands>(command);
+        
+        [HttpDelete("DeleteBookShop")]
+        public async Task<IActionResult> DeleteBookShop([FromBody] DeleteBookShopCommands command)
+            => await Delete(command);
+
+        [HttpPut("UpdateBookShop")]
+        public async Task<IActionResult> UpdateBookShop([FromBody] UpdateBookShopCommands command)
             => await Edit(command);
 
-        [HttpDelete("Delete")]
-        public async Task<IActionResult> DeleteMobile([FromBody] DeleteBookShopCommands command)
-            => await Delete(command);
         #endregion
 
 
 
         #region Queries
+
         [HttpGet("GetBookShopById")]
-        public Task<IActionResult> GetBookShopById([FromQuery] GetBookShopByIdQuery query)
-        {
-            return Query<GetBookShopByIdQuery, GetBookShopByIdResult?>(query);
-        }
+        public async Task<IActionResult> GetBookShopById([FromQuery] GetBookShopByIdQuery query)
+           => await Query<GetBookShopByIdQuery, GetBookShopByIdResult?>(query);
+        
 
         [HttpGet("GetBookShopPageFilter")]
         public async Task<IActionResult> GetPageFilter([FromQuery] GetBookShopPageFilterQuery query)
-        {
-            return await Query<GetBookShopPageFilterQuery, PagedData<GetBookShopPageFilterResult>>(query);
-        }
+            => await Query<GetBookShopPageFilterQuery, PagedData<GetBookShopPageFilterResult>>(query);
+        
 
         [HttpGet("GetBookShopList")]
-        public Task<IActionResult> GetBookShopList([FromQuery] GetBookShopListQuery query)
-        {
-            return Query<GetBookShopListQuery, List<GetBookShopListResult>>(query);
-        }
+        public async Task<IActionResult> GetBookShopList([FromQuery] GetBookShopListQuery query)
+            => await Query<GetBookShopListQuery, List<GetBookShopListResult>>(query);
+        
 
         #endregion
     }

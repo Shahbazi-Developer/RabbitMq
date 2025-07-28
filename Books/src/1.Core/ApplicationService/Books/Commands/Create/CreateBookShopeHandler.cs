@@ -2,7 +2,7 @@
 using Book.Core.Domain.Books.Entitie;
 using Book.Core.Domain.Books.Parameters;
 using Book.Core.Domain.Books.Parameters.BookShop.Create;
-using Book.Core.RequestResponse.Books.Commands.Create;
+using Book.Core.RequestResponse.Books.Commands.BookShop.Create;
 using Zamin.Core.ApplicationServices.Commands;
 using Zamin.Core.RequestResponse.Commands;
 using Zamin.Utilities;

@@ -4,6 +4,7 @@ using Book.Infra.Data.Sql.Commands.Common;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Book.Infra.Data.Sql.Commands.Migrations
 {
     [DbContext(typeof(BookCommandDbContext))]
-    partial class BookCommandDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250728053642_AddDeleteBookShopCategory")]
+    partial class AddDeleteBookShopCategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

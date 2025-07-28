@@ -21,20 +21,20 @@ namespace Book.Infra.Data.Sql.Commands.Books.Repositorys
         public async Task<BookShop?> GetGraph(BookShopGraphModels model)
         {
 
-            var article = _dbContext.Set<BookShop>().AsQueryable();
+            var bookShopCa = _dbContext.Set<BookShop>().AsQueryable();
 
             if (model.BookShopId.HasValue)
             {
-                article = article.Where(s => s.Id == model.BookShopId);
+                bookShopCa = bookShopCa.Where(s => s.Id == model.BookShopId);
             }
 
-            if (model.BookShopCategoryGraphModel is not null)
+            if (model.IncludeBookShopCategoryModel is not null)
             {
-                article = article.Include(x => x.BookShopCategory).Where(x => x.Id == model.BookShopCategoryGraphModel.BookShopId
-                && x.BookShopCategory.Any(x => x.Id == model.BookShopCategoryGraphModel.BookShopCategoryId));
+                bookShopCa = bookShopCa.Include(x => x.BookShopCategory).Where(x => x.Id == model.IncludeBookShopCategoryModel.BookShopId
+                && x.BookShopCategory.Any(x => x.Id == model.IncludeBookShopCategoryModel.Id));
             }
 
-            return await article.FirstOrDefaultAsync();
+            return await bookShopCa.FirstOrDefaultAsync();
         }
         }
     }

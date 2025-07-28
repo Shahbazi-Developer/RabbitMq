@@ -1,4 +1,4 @@
-﻿using Book.Infra.Data.Sql.Queries.BookShops.Entities;
+﻿using Book.Infra.Data.Sql.Queries.Books.Entities;
 using Microsoft.EntityFrameworkCore;
 using Zamin.Infra.Data.Sql.Queries;
 
@@ -9,6 +9,6 @@ public class BookQueryDbContext : BaseQueryDbContext
     public BookQueryDbContext(DbContextOptions<BookQueryDbContext> options) : base(options)
     {
     }
-    public DbSet<BookShop> BookShop { get; set; }
-    public DbSet<BookShopCategory> BookShopCategory { get; set; }
+    public DbSet<BookShop> BookShops { get; set; }
+    public DbSet<BookShopCategory> BookShopCategorys { get; set; }
 }

@@ -9,10 +9,10 @@ namespace Book.Core.RequestResponse.Books.Commands.BookShopCategory.Commans.Upda
 {
     public class UpadateBookShopCategoryCommand :ICommand
     {
-        public int BookShopCategoryId { get; set; }
-        public int BookShopId { get; set; }
-        public string Title { get; set; }
-        public string Authors { get; set; }
+        public required int BookShopCategoryId { get; set; }
+        public required int BookShopId { get; set; }
+        public required string Title { get; set; }
+        public required string Authors { get; set; }
 
     }
 }

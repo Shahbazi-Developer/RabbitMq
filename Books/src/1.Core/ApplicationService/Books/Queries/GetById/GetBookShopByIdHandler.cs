@@ -1,5 +1,5 @@
 ﻿using Book.Core.Contracts.Books.Queries;
-using Book.Core.RequestResponse.Books.Queries.GetById;
+using Book.Core.RequestResponse.Books.Queries.BookShop.GetById;
 using Zamin.Core.ApplicationServices.Queries;
 using Zamin.Core.RequestResponse.Queries;
 using Zamin.Utilities;
@@ -17,7 +17,7 @@ namespace Book.Core.ApplicationService.Books.Queries.GetById
 
         public override async Task<QueryResult<GetBookShopByIdResult?>> Handle(GetBookShopByIdQuery query)
         {
-            return Result(await _bookShopQueryRepository.GetBookShopById(query));
+            return Result(await _bookShopQueryRepository.ExecuteAsync(query));
         }
     }
 }

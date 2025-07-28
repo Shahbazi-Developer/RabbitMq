@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Book.Core.Contracts.Books.Queries;
-using Book.Core.RequestResponse.Books.Queries.GetList;
+using Book.Core.RequestResponse.Books.Queries.BookShop.GetList;
 using Zamin.Core.ApplicationServices.Queries;
 using Zamin.Core.RequestResponse.Queries;
 using Zamin.Utilities;
@@ -22,7 +22,7 @@ namespace Book.Core.ApplicationService.Books.Queries.GetList
 
         public override async Task<QueryResult<List<GetBookShopListResult>>> Handle(GetBookShopListQuery query)
         {
-            return Result(await _bookShopQueryRepository.GetList(query));
+            return Result(await _bookShopQueryRepository.ExecuteAsync(query));
         }
     }
 }

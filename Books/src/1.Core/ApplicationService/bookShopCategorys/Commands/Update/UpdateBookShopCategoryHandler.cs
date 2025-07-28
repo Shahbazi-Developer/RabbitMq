@@ -1,4 +1,5 @@
 ﻿using Book.Core.ApplicationService.Books.DominService.BookShopGraphSrvice;
+using Book.Core.ApplicationService.Mappers;
 using Book.Core.Contracts.Books.Commands;
 using Book.Core.Contracts.Books.DominService.ArticleGraphServices;
 using Book.Core.Domain.Books.Parameters;
@@ -33,10 +34,10 @@ namespace Book.Core.ApplicationService.bookShopCategorys.Commands.Update
         {
             BookShopGraphModels bookShopGraphModels = new BookShopGraphModels
             {
-                BookShopCategoryGraphModel = new()
+                IncludeBookShopCategoryModel = new()
                 {
                     BookShopId = command.BookShopId,
-                    BookShopCategoryId = command.BookShopCategoryId
+                    Id = command.BookShopCategoryId
                 }
             };
 
@@ -51,11 +52,7 @@ namespace Book.Core.ApplicationService.bookShopCategorys.Commands.Update
 
             var articleCategory = entity.Result;
 
-            var parameter = new UpdateBookShopCategoryParameter(command.BookShopCategoryId,
-                                                                command.Title,
-                                                                command.Authors);
-
-            articleCategory!.UpdateBookShopCategory(parameter);
+            articleCategory!.UpdateBookShopCategory(command.ToParameter());
 
             await _bookShopCommandRepository.CommitAsync();
 

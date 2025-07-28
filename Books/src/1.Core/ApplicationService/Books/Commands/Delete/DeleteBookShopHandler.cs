@@ -1,5 +1,5 @@
 ﻿using Book.Core.Contracts.Books.Commands;
-using Book.Core.RequestResponse.Books.Commands.Delete;
+using Book.Core.RequestResponse.Books.Commands.BookShop.Delete;
 using Book.SharedKernel.Translators;
 using Microsoft.Extensions.Logging;
 using System;

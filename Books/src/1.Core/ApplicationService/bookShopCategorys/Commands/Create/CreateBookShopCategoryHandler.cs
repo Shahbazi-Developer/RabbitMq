@@ -1,4 +1,5 @@
-﻿using Book.Core.Contracts.Books.Commands;
+﻿using Book.Core.ApplicationService.Mappers;
+using Book.Core.Contracts.Books.Commands;
 using Book.Core.Contracts.Books.DominService.ArticleGraphServices;
 using Book.Core.Domain.Books.Parameters.BookShopCategory.Create;
 using Book.Core.RequestResponse.Books.Commands.BookShopCategory.Commans.Create;
@@ -51,9 +52,8 @@ namespace Book.Core.ApplicationService.bookShopCategorys.Commands.Create
 
             var bookShop = result.Result;
 
-            CreateBookShopCategoryParameter parameter = new(command.Title, command.Authors);
+            bookShop.CreateBookShopCategory(command.ToParameter());
 
-            bookShop.CreateBookShopCategory(parameter);
             await _commandRepository.CommitAsync();
 
             return Ok();

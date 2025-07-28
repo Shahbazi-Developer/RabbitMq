@@ -7,7 +7,7 @@ namespace Book.Core.Contracts.Books.DominService.ArticleGraphServices
         public int? BookShopId { get; set; }
         public int BookShopCategoryId { get; set; }
 
-        public BookShopCategoryGraphModel? BookShopCategoryGraphModel { get; set; }
+        public IncludeBookShopCategoryModel? IncludeBookShopCategoryModel { get; set; }
 
     }
 }

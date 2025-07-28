@@ -21,6 +21,12 @@ namespace Book.Infra.Data.Sql.Commands.Books.Confogs
             builder.Property(a=>a.CategoryTitle).IsRequired(false).HasMaxLength(MaxLengthConfiguration.GOODS_TITLE_MAXLENGTHS).HasColumnName(nameof(BookShopCategory.CategoryTitle));
 
             builder.Property(a=>a.Authors).IsRequired(false).HasMaxLength(MaxLengthConfiguration.AUTHOR_MAXLENGTHS).HasColumnName(nameof(BookShopCategory.Authors));
+
+
+            builder.OwnsOne(p => p.Deleted, builderAction =>
+            {
+                builderAction.Property(p1 => p1.Value).HasColumnName(nameof(BookShopCategory.Deleted));
+            });
         }
     }
 }

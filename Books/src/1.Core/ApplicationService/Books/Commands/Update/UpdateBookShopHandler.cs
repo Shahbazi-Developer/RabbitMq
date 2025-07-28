@@ -1,6 +1,6 @@
 ﻿using Book.Core.Contracts.Books.Commands;
 using Book.Core.Domain.Books.Parameters.BookShop.Update;
-using Book.Core.RequestResponse.Books.Commands.Update;
+using Book.Core.RequestResponse.Books.Commands.BookShop.Update;
 using Book.SharedKernel.Translators;
 using Microsoft.Extensions.Logging;
 using System;
