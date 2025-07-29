@@ -13,7 +13,7 @@ using Zamin.Core.RequestResponse.Commands;
 using Zamin.Extensions.Translations.Abstractions;
 using Zamin.Utilities;
 
-namespace Book.Core.ApplicationService.Books.Commands.Delete
+namespace Book.Core.ApplicationService.Books.BookShops.Commands.Delete
 {
     public class DeleteBookShopHandler : CommandHandler<DeleteBookShopCommands>
     {

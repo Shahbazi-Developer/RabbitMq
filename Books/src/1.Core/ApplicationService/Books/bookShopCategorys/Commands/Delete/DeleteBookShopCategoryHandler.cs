@@ -11,7 +11,7 @@ using Zamin.Core.RequestResponse.Commands;
 using Zamin.Extensions.Translations.Abstractions;
 using Zamin.Utilities;
 
-namespace Book.Core.ApplicationService.bookShopCategorys.Commands.Delete
+namespace Book.Core.ApplicationService.Books.bookShopCategorys.Commands.Delete
 {
     public class DeleteBookShopCategoryHandler : CommandHandler<DeleteBookShopCategoryCommand>
     {

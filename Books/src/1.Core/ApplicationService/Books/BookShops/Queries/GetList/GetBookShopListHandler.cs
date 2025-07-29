@@ -4,23 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Book.Core.Contracts.Books.Queries;
-using Book.Core.RequestResponse.Books.Queries.BookShop.GetPageFilter;
+using Book.Core.RequestResponse.Books.Queries.BookShop.GetList;
 using Zamin.Core.ApplicationServices.Queries;
 using Zamin.Core.RequestResponse.Queries;
 using Zamin.Utilities;
 
-namespace Book.Core.ApplicationService.Books.Queries.GetPageFilter
+namespace Book.Core.ApplicationService.Books.BookShops.Queries.GetList
 {
-    public class GetBookShopPageFilterHandler : QueryHandler<GetBookShopPageFilterQuery, PagedData<GetBookShopPageFilterResult>>
+    public class GetBookShopListHandler : QueryHandler<GetBookShopListQuery, List<GetBookShopListResult>>
     {
         private readonly IBookShopQueryRepository _bookShopQueryRepository;
 
-        public GetBookShopPageFilterHandler(ZaminServices zaminServices ,IBookShopQueryRepository bookShopQueryRepository) : base(zaminServices) 
+        public GetBookShopListHandler(ZaminServices zaminServices ,IBookShopQueryRepository bookShopQueryRepository) : base(zaminServices)
         {
             _bookShopQueryRepository = bookShopQueryRepository;
         }
 
-        public override async Task<QueryResult<PagedData<GetBookShopPageFilterResult>>> Handle(GetBookShopPageFilterQuery query)
+        public override async Task<QueryResult<List<GetBookShopListResult>>> Handle(GetBookShopListQuery query)
         {
             return Result(await _bookShopQueryRepository.ExecuteAsync(query));
         }

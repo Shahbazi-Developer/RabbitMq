@@ -14,7 +14,7 @@ using Zamin.Core.RequestResponse.Commands;
 using Zamin.Extensions.Translations.Abstractions;
 using Zamin.Utilities;
 
-namespace Book.Core.ApplicationService.Books.Commands.Update
+namespace Book.Core.ApplicationService.Books.BookShops.Commands.Update
 {
     public class UpdateBookShopHandler : CommandHandler<UpdateBookShopCommands>
     {

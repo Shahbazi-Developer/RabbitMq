@@ -3,7 +3,7 @@ using Book.SharedKernel.Translators;
 using Microsoft.Extensions.Logging;
 using Zamin.Extensions.Translations.Abstractions;
 
-namespace Book.Core.ApplicationService.Books.Commands.ReqBooks
+namespace Book.Core.ApplicationService.Books.BookShops.Commands.ReqBooks
 {
     public class InventoryCheckResponseHandler
     {

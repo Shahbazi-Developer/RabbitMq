@@ -4,7 +4,7 @@ using Zamin.Core.ApplicationServices.Queries;
 using Zamin.Core.RequestResponse.Queries;
 using Zamin.Utilities;
 
-namespace Book.Core.ApplicationService.Books.Queries.GetById
+namespace Book.Core.ApplicationService.Books.BookShops.Queries.GetById
 {
     public class GetBookShopByIdHandler : QueryHandler<GetBookShopByIdQuery, GetBookShopByIdResult?>
     {

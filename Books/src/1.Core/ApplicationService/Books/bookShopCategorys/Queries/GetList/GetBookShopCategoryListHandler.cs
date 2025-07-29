@@ -4,7 +4,7 @@ using Zamin.Core.ApplicationServices.Queries;
 using Zamin.Core.RequestResponse.Queries;
 using Zamin.Utilities;
 
-namespace Book.Core.ApplicationService.bookShopCategorys.Queries.GetList
+namespace Book.Core.ApplicationService.Books.bookShopCategorys.Queries.GetList
 {
     public class GetBookShopCategoryListHandler : QueryHandler<GetBookShopCategoryListQuery, List<GetBookShopCategoryListResult>>
     {

@@ -1,4 +1,4 @@
-﻿using Book.Core.ApplicationService.Books.Commands.ReqBooks;
+﻿using Book.Core.ApplicationService.Books.BookShops.Commands.ReqBooks;
 using Book.Core.Contracts.Books.Commands;
 using Book.Endpoints.API.Extentions;
 using Book.Infra.Data.Sql.Commands.MessageBus;

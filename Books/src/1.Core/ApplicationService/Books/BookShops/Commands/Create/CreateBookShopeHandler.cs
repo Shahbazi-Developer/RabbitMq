@@ -7,7 +7,7 @@ using Zamin.Core.ApplicationServices.Commands;
 using Zamin.Core.RequestResponse.Commands;
 using Zamin.Utilities;
 
-namespace Book.Core.ApplicationService.Books.Commands.Create
+namespace Book.Core.ApplicationService.Books.BookShops.Commands.Create
 {
     public class CreateBookShopeHandler : CommandHandler<CreateBookShopCommands>
     {
@@ -45,9 +45,9 @@ namespace Book.Core.ApplicationService.Books.Commands.Create
             var message = new
             {
                 BookId = bookShop.Id,
-                Title = bookShop.Title,
-                Author = bookShop.Author,
-                CreationDate = bookShop.CreationDate,
+                bookShop.Title,
+                bookShop.Author,
+                bookShop.CreationDate,
                 
             };
 

@@ -12,7 +12,7 @@ using Zamin.Core.RequestResponse.Common;
 using Zamin.Extensions.Translations.Abstractions;
 using Zamin.Utilities;
 
-namespace Book.Core.ApplicationService.bookShopCategorys.Commands.Create
+namespace Book.Core.ApplicationService.Books.bookShopCategorys.Commands.Create
 {
     public class CreateBookShopCategoryHandler : CommandHandler<CreateBookShopCategoryCommand>
     {
